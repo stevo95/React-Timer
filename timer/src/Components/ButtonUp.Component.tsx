@@ -1,4 +1,3 @@
-
 const ButtonIp = () => {
   return (
     <svg
@@ -16,6 +15,6 @@ const ButtonIp = () => {
       ></path>
     </svg>
   );
-}
+};
 
 export default ButtonIp;

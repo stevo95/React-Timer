@@ -1,17 +1,14 @@
-import React, { useEffect } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import TimerPage from './Pages/Timer.Page';
+import React, { useEffect } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import TimerPage from "./Pages/Timer.Page";
 
 function App() {
-
   useEffect(() => {
     document.title = "React Timer";
   }, []);
-  
-  return (
-    <TimerPage/>
-  );
+
+  return <TimerPage />;
 }
 
 export default App;

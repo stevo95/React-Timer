@@ -1,3 +1,1 @@
-export const upSvgAttributeTags = {
-    
-}
+export const upSvgAttributeTags = {};

@@ -1,12 +1,18 @@
-import './ClockIcon.Component.css';
+import "./ClockIcon.Component.css";
 
 interface ClockInconInterface {
-    sizeClass: string;
+  sizeClass: string;
 }
 
-const ClockIcon = ({sizeClass}: ClockInconInterface) => {
+const ClockIcon = ({ sizeClass }: ClockInconInterface) => {
   return (
-    <svg className={sizeClass} xmlns="http://www.w3.org/2000/svg" width="23" height="23" version="1">
+    <svg
+      className={sizeClass}
+      xmlns="http://www.w3.org/2000/svg"
+      width="23"
+      height="23"
+      version="1"
+    >
       <defs>
         <linearGradient>
           <stop offset="0" stopColor="#ae2fed" stopOpacity="0.959"></stop>
@@ -46,6 +52,6 @@ const ClockIcon = ({sizeClass}: ClockInconInterface) => {
       </g>
     </svg>
   );
-}
+};
 
 export default ClockIcon;

@@ -1,4 +1,3 @@
-
 const ButtonDown = () => {
   return (
     <svg
@@ -16,6 +15,6 @@ const ButtonDown = () => {
       ></path>
     </svg>
   );
-}
+};
 
 export default ButtonDown;
