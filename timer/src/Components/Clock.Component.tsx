@@ -24,7 +24,7 @@ const Clock = (): React.ReactElement => {
     if (isPwrOn && time > 0) {
       const timer = setTimeout(() => {
         calculateTime();
-      }, 1000);
+      }, interval);
 
       return () => clearTimeout(timer);
     } else {
