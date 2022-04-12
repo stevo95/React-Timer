@@ -3,7 +3,9 @@ import "./SliderScale.Component.css";
 
 const SliderScale = (): React.ReactElement => {
   const renderLines = () => {
-    const array = new Array(101).fill(0);
+    let arraySize = window.innerWidth <= 600 ? 51 : 101;
+
+    const array = new Array(arraySize).fill(0);
     return array.map((el, idx) => {
       if (idx === 0 || idx % 5 === 0) {
         return <div className="line_large" key={idx}></div>;
