@@ -126,7 +126,7 @@ const Clock = (): React.ReactElement => {
           <div className="clock_sliderContainer_slider">
             <input
               type="range"
-              min="1"
+              min="0"
               max="1000"
               step="1"
               value={time}
