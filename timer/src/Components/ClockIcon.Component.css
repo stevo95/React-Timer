@@ -1,0 +1,11 @@
+.large {
+    transition: 0.3s;
+    transform: scale(2, 2);
+    -webkit-filter: drop-shadow(0 0 5px rgb(163, 255, 255));
+    filter: drop-shadow(0 0 5px rgb(163, 255, 255));
+}
+
+.hidden {
+    visibility: hidden;
+    transform: scale(2, 2);
+}

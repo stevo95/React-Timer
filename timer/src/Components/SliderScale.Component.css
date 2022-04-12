@@ -1,0 +1,19 @@
+.scale_container {
+    width: 100%; height: 100%;
+    display: flex;  flex-direction: row;
+    justify-content: space-around;
+    box-sizing: border-box; padding-right: 10px;
+    transform: rotate(180deg);
+}
+
+.line_large {
+    border-left: solid;
+    height: 90%;
+    border-color: white;
+}
+
+.line_small {
+    border-left: solid;
+    height: 30%;
+    border-color: white;
+}

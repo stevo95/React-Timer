@@ -1,0 +1,44 @@
+
+.toggle {
+    position: relative;
+    height: 25px; width: 40px;
+    border-radius: 12.5px;
+    cursor: pointer;
+    box-sizing: border-box; 
+    padding-inline: 1px; padding-block: 1.5px;
+    background-color: rgb(31, 31, 31)
+}
+
+.button_min {
+    position: absolute;
+    transition: opacity 1s;
+    height: 22px; width: 22px;
+    border-radius: 11px;
+    background-color: rgb(187, 194, 204);
+    transform: translateX(0);
+    transition: all 300ms;
+}
+
+.button_hrs {
+    position: absolute;
+    height: 22px; width: 22px;
+    border-radius: 11px;
+    background-color: rgb(187, 194, 204);
+    transform: translateX(16px);
+    transition: all 300ms;
+}
+
+@media only screen and (max-width: 600px) {
+    .toggle {
+      height: 20px;
+    }
+    .button_min {
+        height: 17px; width: 17px;
+        border-radius: 8.5px;
+    }
+    .button_hrs {
+        height: 17px; width: 17px;
+        border-radius: 8.5px;
+        transform: translateX(20px);
+    }
+}
