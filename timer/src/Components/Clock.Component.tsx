@@ -6,7 +6,7 @@ import ClockIcon from "./ClockIcon.Component";
 import ToggleButton from "./ToggleButton.Component";
 import SliderScale from "./SliderScale.Component";
 
-const Clock = () => {
+const Clock = (): React.ReactElement => {
   const [isPwrOn, setIsPwrOn] = useState<boolean>(false);
   const [time, setTime] = useState<number>(0);
   const [units, setUnits] = useState<string>("MIN");
@@ -48,7 +48,7 @@ const Clock = () => {
     setIsPwrOn(!isPwrOn);
   };
 
-  const renderClockIcon = () => {
+  const renderClockIcon = (): React.ReactElement => {
     const iconClass = isPwrOn ? "large" : "hidden";
     return <ClockIcon sizeClass={iconClass} />;
   };
@@ -70,11 +70,14 @@ const Clock = () => {
     }
   };
 
-  const handleTimeChangeWithSlider = (event: any): void => {
-    setTime(parseInt(event.target.value));
+  const handleTimeChangeWithSlider = (
+    event: React.FormEvent<HTMLDivElement>
+  ): void => {
+    const value = (event.target as HTMLInputElement).value;
+    setTime(parseInt(value));
   };
 
-  const handlePwrLightClass = () => {
+  const handlePwrLightClass = (): string => {
     return isPwrOn ? "light_on" : "light_off";
   };
 
@@ -116,7 +119,7 @@ const Clock = () => {
       <div className="clock_bottomPart">
         <div className="clock_switchContainer">
           MIN
-          <ToggleButton unitsSetter={setUnits} />
+          <ToggleButton unitsSetter={setUnits} units={units} />
           HRS
         </div>
         <div className="clock_sliderContainer">

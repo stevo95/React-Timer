@@ -1,6 +1,7 @@
+import React from "react";
 import "./SliderScale.Component.css";
 
-const SliderScale = () => {
+const SliderScale = (): React.ReactElement => {
   const renderLines = () => {
     const array = new Array(101).fill(0);
     return array.map((el, idx) => {

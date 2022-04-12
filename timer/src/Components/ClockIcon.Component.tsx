@@ -1,10 +1,11 @@
+import React from "react";
 import "./ClockIcon.Component.css";
 
 interface ClockInconInterface {
   sizeClass: string;
 }
 
-const ClockIcon = ({ sizeClass }: ClockInconInterface) => {
+const ClockIcon = ({ sizeClass }: ClockInconInterface): React.ReactElement => {
   return (
     <svg
       className={sizeClass}

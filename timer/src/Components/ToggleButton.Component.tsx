@@ -1,23 +1,28 @@
-import { useState } from "react";
+import React, { Dispatch, useState } from "react";
 import "./ToggleButton.Component.css";
 
-const ToggleButton = ({ unitsSetter }: any) => {
+interface ToggleButtonProps {
+  unitsSetter: Dispatch<string>;
+  units: string;
+}
+
+const ToggleButton = ({
+  unitsSetter,
+  units,
+}: ToggleButtonProps): React.ReactElement => {
   const [isToggled, setIsToggled] = useState<boolean>(true);
 
-  const handleToggle = () => {
+  const handleToggle = (): void => {
     setIsToggled(!isToggled);
-    unitsSetter((previous: string) => {
-      if (previous === "MIN") {
-        return "HRS";
-      } else {
-        return "MIN";
-      }
-    });
+    if (units === "MIN") {
+      unitsSetter("HRS");
+    } else {
+      unitsSetter("MIN");
+    }
   };
 
-  const handleButtonClass = () => {
-    const classBu = isToggled ? "button_min" : "button_hrs";
-    return classBu;
+  const handleButtonClass = (): string => {
+    return isToggled ? "button_min" : "button_hrs";
   };
 
   return (
