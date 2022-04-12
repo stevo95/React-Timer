@@ -1,1 +1,2 @@
-# React-Timer
+# React Countdown Timer Widget
+
